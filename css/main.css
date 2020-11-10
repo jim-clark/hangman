@@ -1,0 +1,108 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --accent-dark: #BB4C3A;
+  --accent-light: #FDD39C;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+header {
+  font-size: 6vmin;
+  padding: 1vmin;
+  background-color: var(--accent-dark);
+  color: white;
+  text-align: center;
+  letter-spacing: .5vmin;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4vmin;
+}
+
+section button {
+  font-size: 2vmin;
+  font-weight: bold;
+  width: 5vmin;
+  height: 5vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .5vmin;
+  border: .4vmin solid grey;
+  color: grey;
+  border-radius: 1vmin;
+  outline: none;
+}
+
+#msg {
+  font-size: 5vmin;
+  color: var(--accent-dark);
+  text-align: center;
+}
+
+#msg > span {
+  font-size: 3vmin;
+}
+
+#replay {
+  font-size: 2vmin;
+  font-weight: bold;
+  padding: 2vmin;
+  margin-top: 4vmin;
+  border: .3vmin solid grey;
+  color: grey;
+  border-radius: 2vmin;
+  outline: none;
+  cursor: pointer;
+}
+
+#replay:hover {
+  background-color: grey;
+  color: white;
+}
+
+#gallows {
+  width: 15vmin;
+  height: 40vmin;
+  background-image: url(../imgs/hangman.png);
+  background-size: cover;
+}
+
+#guess {
+  font-size: 6vmin;
+  letter-spacing: 2vmin;
+  color: grey;
+  text-align: center;
+}
+
+button.valid-letter {
+  background-color: var(--accent-light);
+  color: rgb(61, 60, 60);
+  cursor: not-allowed;
+}
+
+button.wrong-letter {
+  background-color: var(--accent-dark);
+  color: grey;
+  cursor: not-allowed;
+}
